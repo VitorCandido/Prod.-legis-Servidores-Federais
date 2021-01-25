@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+d-title {
+padding-top: 12rem;
+font-weight: 800;
+color: #fff;
+background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(77,77,77, 0.9), 
+      rgba(77,77,77, 0.9)
+    ),
+    /* bottom, image */
+    url(images/tim-jamieson-y-Gq4gMD8Tc-unsplash.jpg) no-repeat center center fixed;
+background-size:cover !important;
+}
+
+.highcharts-container text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+d-title p {
+  color:#F8F8FF;
+}

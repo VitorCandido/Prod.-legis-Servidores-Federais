@@ -1,0 +1,26 @@
+---
+title: "Como colaborar com o projeto"
+output: html_document
+---
+
+## Step by Step Overview
+
+If you are willing to contribute you will have to follow the below steps (we will
+discuss some steps more detailed in the next section). Please note we assume that
+you have [RStudio](https://rstudio.com/) and git (I highly recommend [Hadley's
+git section](http://r-pkgs.had.co.nz/git.html) in "R packages") installed. 
+
+1. Install the R packages you will need to contribute
+1. Create a copy of the website repo to your GitHub (you'll need a free account)
+1. Load it into a new RStudio project and start working in a new branch
+1. Create the new article (see [the 
+repo](https://github.com/mrcaseb/open-source-football/tree/master/_posts) for 
+some examples and check the [Distill for R 
+Markdown](https://rstudio.github.io/distill) website) and please don't forget
+to add [metadata and chunk options](#start-working-on-the-post) like suggested
+in the next section
+1. Commit all to your post related files and push them into the new branch in 
+your GitHub repo (please see [Push your work into your repo](#push-your-work-into-your-repo)
+for details what you should do to **avoid merge conflicts**)
+1. Visit your repo and create a pull request to merge your post into the 
+open-source-football repo

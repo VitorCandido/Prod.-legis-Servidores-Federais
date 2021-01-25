@@ -1,0 +1,32 @@
+name: "rblog_distill"
+title: "NewsData"
+description: |
+  Divulgação científica
+base_url: 
+output_dir: "_site"
+navbar:
+  right:
+    - text: "Home"
+      href: index.html
+    - text: "Como colaborar"
+      href: comocolaborar.html
+    - text: "Autores"
+      href: autores.html
+    - text: "Sobre"
+      href: sobre.html
+    - text: "Contato"
+      href: contato.html
+    - icon: fa fa-github
+      href: https://github.com/vcandido
+    - icon: fa fa-instagram
+      href: https://github.com/vcandido
+    - icon: fa fa-twitter
+      href: https://twitter.com/
+    - icon: fa fa-rss
+      href: index.xml
+output: 
+    distill::distill_article:
+      css: styles.css
+
+
+
