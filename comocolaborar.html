@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Como colaborar com o projeto</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #ffffff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "&#xe258;";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="index.html">Home</a>
+</li>
+<li>
+  <a href="comocolaborar.html">Como colaborar</a>
+</li>
+<li>
+  <a href="autores.html">Autores</a>
+</li>
+<li>
+  <a href="sobre.html">Sobre</a>
+</li>
+<li>
+  <a href="contato.html">Contato</a>
+</li>
+<li>
+  <a href="https://github.com/vcandido">
+    <span class="fa fa fa fa-github"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://github.com/vcandido">
+    <span class="fa fa fa fa-instagram"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://twitter.com/">
+    <span class="fa fa fa fa-twitter"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="index.xml">
+    <span class="fa fa fa fa-rss"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Como colaborar com o projeto</h1>
+
+</div>
+
+
+<div id="step-by-step-overview" class="section level2">
+<h2>Step by Step Overview</h2>
+<p>If you are willing to contribute you will have to follow the below steps (we will discuss some steps more detailed in the next section). Please note we assume that you have <a href="https://rstudio.com/">RStudio</a> and git (I highly recommend <a href="http://r-pkgs.had.co.nz/git.html">Hadley’s git section</a> in “R packages”) installed.</p>
+<ol style="list-style-type: decimal">
+<li>Install the R packages you will need to contribute</li>
+<li>Create a copy of the website repo to your GitHub (you’ll need a free account)</li>
+<li>Load it into a new RStudio project and start working in a new branch</li>
+<li>Create the new article (see <a href="https://github.com/mrcaseb/open-source-football/tree/master/_posts">the repo</a> for some examples and check the <a href="https://rstudio.github.io/distill">Distill for R Markdown</a> website) and please don’t forget to add <a href="#start-working-on-the-post">metadata and chunk options</a> like suggested in the next section</li>
+<li>Commit all to your post related files and push them into the new branch in your GitHub repo (please see <a href="#push-your-work-into-your-repo">Push your work into your repo</a> for details what you should do to <strong>avoid merge conflicts</strong>)</li>
+<li>Visit your repo and create a pull request to merge your post into the open-source-football repo</li>
+</ol>
+<p>With the last step we will be notified and will take a look at your article, suggest changes as necessary, then publish it when it’s ready by merging it into the main repo.</p>
+</div>
+<div id="more-detailed-instruction" class="section level2">
+<h2>More Detailed Instruction</h2>
+<div id="install-the-packages" class="section level3">
+<h3>Install the packages</h3>
+<p>Install the packages <code>distill</code> and <code>rmarkdown</code> with</p>
+<pre class="r"><code>install.packages(c(&quot;distill&quot;, &quot;rmarkdown&quot;))</code></pre>
+</div>
+<div id="fork-the-repo" class="section level3">
+<h3>Fork the repo</h3>
+<p>Login to your GitHub account, view the <a href="https://github.com/mrcaseb/open-source-football">website repo</a> and fork it by clicking the “Fork” button. The current version of the repo will be copied into your GitHub.</p>
+<p><img src="https://user-images.githubusercontent.com/38586519/90563320-ed936480-e1a3-11ea-90b0-9fbc00a6808b.png" /><!-- --></p>
+<p>Create a new branch within your repo and try to choose a descriptive name</p>
+<p><img src="https://user-images.githubusercontent.com/38586519/90564133-24b64580-e1a5-11ea-91cc-5e34224f63d5.png" width="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="import-the-repo-into-a-rstudio-project" class="section level3">
+<h3>Import the repo into a RStudio Project</h3>
+<p>Copy the web url of the new repo into your clipboard</p>
+<p><img src="https://user-images.githubusercontent.com/38586519/90564521-cccc0e80-e1a5-11ea-8fd7-493f40b74cd3.png" width="50%" style="display: block; margin: auto;" /></p>
+<p>In RStudio choose <em>Create a Project</em> &gt; <em>Version Control</em> &gt; <em>Git</em>, paste the Repository URL from above and click “Create Project”. The whole thing will be downloaded and the project opened.</p>
+<p>Important: Make sure you switch into your newly created branch from the previous section!</p>
+<p>For further information please visit <a href="https://happygitwithr.com/rstudio-git-github.html">happygitwithr.com</a>.</p>
+<p><img src="https://user-images.githubusercontent.com/38586519/90626505-57028a00-e21b-11ea-847d-621083af7771.png" style="display: block; margin: auto;" /></p>
+</div>
+<div id="start-working-on-the-post" class="section level3">
+<h3>Start working on the post</h3>
+<p>Create the new article by running</p>
+<pre class="r"><code>distill::create_post(&quot;Title of your post&quot;)</code></pre>
+<p>This will create a new folder in <code>_posts</code> and name it with the current date and your chosen title. Additionally the RMarkdown file in which you will write your post will be opened automatically. It will look something like this</p>
+<p><img src="https://user-images.githubusercontent.com/38586519/90627998-1dcb1980-e21d-11ea-8ea9-e307f81087c4.png" style="display: block; margin: auto;" /></p>
+<p>We need to tweak the metadata as well as the chunk setup a little bit in order for the post to meet our expectations. Please have a look at <a href="https://github.com/mrcaseb/open-source-football/blob/master/_sample_meta_and_options.Rmd">example file</a> for a little template.</p>
+<p><img src="https://user-images.githubusercontent.com/38586519/90628632-3e47a380-e21e-11ea-9bae-a01ac6720026.png" style="display: block; margin: auto;" /></p>
+<p>Now you are ready to write your post. Please see <a href="https://rstudio.github.io/distill">Distill for R Markdown</a> as well as some of <a href="https://github.com/mrcaseb/open-source-football/tree/master/_posts">the already published posts</a>. And if you feel like you need more information about R Markdown please feel free to check the <a href="https://bookdown.org/yihui/rmarkdown-cookbook/">R Markdown Cookbook</a>.</p>
+</div>
+<div id="push-your-work-into-your-repo" class="section level3">
+<h3>Push your work into your repo</h3>
+<p>Using git within RStudio is easy because you can do it graphically. However, it doesn’t make sense to provide a ton of screenshots and text here. Instead I recommend two sources:</p>
+<ul>
+<li>The short one is <a href="https://happygitwithr.com/rstudio-git-github.html">happygitwithr.com</a></li>
+<li>The detailed one is <a href="http://r-pkgs.had.co.nz/git.html">Hadley’s section</a></li>
+</ul>
+<p>Commit all files <strong>which are related to your post</strong> and go on with the last step. There are 4 files not related to your post causing merge conflicts when you push them without updating them before your pull request. To avoid this please run the following code right before you commit all your files.</p>
+<pre class="r"><code>source(&quot;https://raw.githubusercontent.com/mrcaseb/open-source-football/master/_update_con_files.R&quot;)</code></pre>
+<p>Never mind if you forget that. You can create the pull request anyway and GitHub will inform you if there are conflicts. Just run the above lines and commit and push the updated files <code>docs/index.html</code>, <code>docs/index.xml</code>, <code>docs/posts/posts.json</code>, <code>docs/sitemap.xml</code>.</p>
+</div>
+<div id="create-the-pull-request" class="section level3">
+<h3>Create the Pull Request</h3>
+<p>To create the Pull Request visit your GitHub repo and you will notice a banner indicating that you’ve recently pushed a new branch and that you can “compare &amp; pull request”. Follow the steps for <a href="https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork">creating a pull request from a fork</a> and you are finally done.</p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
